@@ -1,4 +1,5 @@
 import { MouseEventHandler } from "react";
+import { manufacturers } from "./../constants/index";
 
 export interface CustomButtonProps {
   isDisabled?: boolean;
@@ -8,4 +9,9 @@ export interface CustomButtonProps {
   title: string;
   rightIcon?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+export interface setManufacturerProps {
+  manufacturer: string
+  setManuFacturer:(manufacturers: string) => void
 }
