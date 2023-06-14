@@ -33,7 +33,7 @@ const CarCard = ({car}:CarCardProps) => {
             </span>
         </p>
         <div className="w-full h-40 relative my-3 object-contain">
-            <Image src="/hero.png" fill alt="car" className="object-contain"/>
+            <Image src="/hero.png" fill alt="car" priority className="object-contain"/>
         </div>
         <div className="relative flex w-full mt-2">
             <div className="flex group-hover:invisible w-full justify-between to-gray-500">
@@ -66,7 +66,11 @@ const CarCard = ({car}:CarCardProps) => {
                 />
             </div>
         </div>
-        <CarDetails />
+        <CarDetails 
+            isOpen={isOpen} 
+            closeModal = {()=>setIsOpen(false)}
+            car = {car}
+        />
     </div>
   )
 }
