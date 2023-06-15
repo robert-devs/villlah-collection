@@ -7,8 +7,6 @@ import Hero from "./Hero";
 import NavBar from "./Navbar";
 import SearchBar from "./SearchBar";
 
- import SearchManufacturer from "./SearchManufacturer";
-
 export {
     Hero,CustomButton,CustomFilter,NavBar,Footer,SearchBar,CarCard,CarDetails
 }
