@@ -1,8 +1,9 @@
 "use client";
 import { CarCard, CustomFilter, Hero, SearchBar } from "@/components";
+import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 
-export default async function Home({searchParams}) {
+export default async function Home({searchParams}:any) {
   const allCars = await fetchCars({
     manufacturer:searchParams.manufacturer || " ",
     year:searchParams.year || 2022,
@@ -25,8 +26,8 @@ export default async function Home({searchParams}) {
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter  />
-            <CustomFilter  />
+            <CustomFilter title = "fuels"  options ={fuels} />
+            <CustomFilter title ="year" options ={yearsOfProduction}  />
           </div>
         </div>
         {
@@ -43,7 +44,7 @@ export default async function Home({searchParams}) {
           ):(
             <div className="home__error-container">
               <h1 className="text-black  text-xl font-bold">
-                ooops there are no results for ${allCars}
+                ooops there are no results 
               </h1>
             </div>
           )
