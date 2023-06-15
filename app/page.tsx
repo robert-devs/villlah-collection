@@ -1,10 +1,10 @@
 "use client";
 import { CarCard, CustomButton, CustomFilter, Hero, SearchBar } from "@/components";
+import { FilterProps } from "@/types";
 import { fetchCars } from "@/utils";
 
 export default async function Home() {
   const allCars = await fetchCars()
-    console.log(allCars)
 
   const isEmpty = !Array.isArray(allCars) || allCars.length<1 ||!allCars
   return (
