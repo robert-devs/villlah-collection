@@ -6,7 +6,8 @@ import Footer from "./Footer";
 import Hero from "./Hero";
 import NavBar from "./Navbar";
 import SearchBar from "./SearchBar";
+import ShowMore from "./ShowMore";
 
 export {
-    Hero,CustomButton,CustomFilter,NavBar,Footer,SearchBar,CarCard,CarDetails
+    Hero,CustomButton,CustomFilter,NavBar,Footer,SearchBar,CarCard,CarDetails,ShowMore
 }
