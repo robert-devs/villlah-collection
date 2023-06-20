@@ -4,7 +4,7 @@ import { Listbox, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { CustomFilterProps } from "@/types";
 
-export default function CustomFilter({ title, options,setFilter }: CustomFilterProps) {
+export default function CustomFilter<T>({  options,setFilter }: CustomFilterProps<T>) {
   const [selected, setSelected] = useState(options[0]); 
 
   return (
@@ -13,7 +13,7 @@ export default function CustomFilter({ title, options,setFilter }: CustomFilterP
         value={selected}
         onChange={(e) => {
           setSelected(e);
-          setFilter(e.value);
+          setFilter(e.value as unknown as T) ;
         }}
       >
         <div className='relative w-fit z-10'>

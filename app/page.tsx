@@ -57,15 +57,15 @@ export default  function Home() {
         </div>
         <div className="home__filters">
           <SearchBar
-            setManufacturer ={setManufacturer}
+            setManufacturer={setManuFacturer}
             setModel ={setModel}
           />
 
           <div className="home__filter-container">
-            <CustomFilter title = "fuels"  options ={fuels}
+            <CustomFilter  options ={fuels}
               setFilter = {setFuel}
             />
-            <CustomFilter title ="year" options ={yearsOfProduction} setFilter = {setYear} />
+            <CustomFilter  options ={yearsOfProduction} setFilter = {setYear} />
           </div>
         </div>
         {
